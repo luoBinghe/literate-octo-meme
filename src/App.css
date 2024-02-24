@@ -1,38 +1,135 @@
+/* por se tratar de uma folha A4, 
+os elementos principais(parents) devem ter um padding **/
+
 .App {
-  text-align: center;
+  margin: 0;
+  padding: 0;
+  /* width: 2480px;  largura 1 folha A4 **/
+  /* height: 3508px;  altura 1 folha A4 **/
+  color: #FFF;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Container {
   display: flex;
   flex-direction: column;
+  gap: 1.5rem;
+}
+
+.Orange {
+  color: #ff7a00;
+}
+
+.Header {
+  background-color: rgb(35 39 47/1);
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 12rem 5rem 2rem;
+}
+
+.Logo {
+  font-weight: 700;
+  font-size: 40px;
+} 
+
+.HeaderContent {
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+
+  span {
+    font-weight: 700;
+  }
+}
+
+.Main {
+  background-color: #FFF;
+  color: black;
+  padding: 1rem;
+
+  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+}
+
+.GridSection {
+  margin-top: -5rem;
+
+  width: 100%;
+  display: grid;
+  grid-template-columns: 5fr repeat(5, 1fr);
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  gap: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.Centralize {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.Card {
+  align-items: center;
+  border: 4px solid#ff7a00;
+  border-radius: 5px;
+  height: 17rem;
+  width: 15rem;
+  background-color: #FFF;
+
+  font-size: 40px;
+}
+
+.Colorized {
+  font-size: 50px;
+  color: #ff7a00;
+  font-weight: 700;
+}
+
+.GridText {
+  font-size: 18px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.Duck {
+  max-width: 627px;
+}
+
+.LoopSection {
+  width: 100%;
+
+  border-top: 3px solid #ff7a00;
+  border-bottom: 3px solid #ff7a00;
+
+  display: flex;
+}
+
+.Table {
+  width: 100%;
+
+  font-size: 18px;
+  font-weight: 400;
+  color: #58595b;
+
+
+  thead tr th {
+    padding: 7px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: left;
+    border-bottom: 3px solid #ff7a00;
   }
-  to {
-    transform: rotate(360deg);
+
+  tbody tr td {
+    padding: 7px;
+    text-transform: capitalize;
+    border-bottom: 1px solid #58595b;
+    font-weight: 500;
+  }
+
+  tbody tr:last-child td {
+    border-bottom: none;
   }
 }
